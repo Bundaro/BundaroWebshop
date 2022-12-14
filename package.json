@@ -5,8 +5,7 @@
     "dev": "vite",
     "build": "vite build --base=./",
     "preview": "vite preview --port 4173",
-    "deploy": "npm run build && gh-pages -d dist", 
-    "gh-pages-deploy": "node scripts/gh-pages-deploy.js"
+    "deploy": "npm run build && gh-pages -d dist",
   },
   "devDependencies": {
     "gh-pages": "^4.0.0"
