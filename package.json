@@ -1,5 +1,5 @@
 {
-  "name": "ibs-fysiotherapy-fe",
+  "name": "Bundaro",
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
@@ -12,6 +12,7 @@
     "gh-pages": "^4.0.0"
   },
   "dependencies": {
+    "execa": "^6.1.0",
     "vite": "^4.0.1"
   }
 }
