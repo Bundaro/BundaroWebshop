@@ -3,7 +3,7 @@ import { defineConfig } from "vite";
 const path = require("path");
 
 export default defineConfig({
-    base: '/Bundaro/',
+    base: './',
     srcDir: "src",
     resolve: {
         alias: {
