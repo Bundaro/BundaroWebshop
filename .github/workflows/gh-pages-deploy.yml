@@ -4,21 +4,46 @@ on:
     branches:
       - main
 jobs:
-  gh-pages-deploy:
-    name: Deploying to gh-pages
+ build:
+    name: Build
     runs-on: ubuntu-latest
+
     steps:
-      - name: Setup Node.js for use with actions
-        uses: actions/setup-node@v2
-        with:
-          node-version:  12.x
-      - name: Checkout branch
+      - name: Checkout repo
         uses: actions/checkout@v2
 
-      - name: Clean install dependencies
-        run: npm ci
+      - name: Setup Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: 16
 
-      - name: Run deploy script
-        run: |
-          git config user.name "Bundaro" && git config user.email "120494681+Bundaro@users.noreply.github.com"
-          npm run deploy
+      - name: Install dependencies
+        uses: bahmutov/npm-install@v1
+
+      - name: Build project
+        run: npm run build
+
+      - name: Upload production-ready build files
+        uses: actions/upload-artifact@v2
+        with:
+          name: production-files
+          path: ./dist
+
+  deploy:
+    name: Deploy
+    needs: build
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+
+    steps:
+      - name: Download artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: production-files
+          path: ./dist
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
