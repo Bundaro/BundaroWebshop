@@ -12,9 +12,6 @@
     "gh-pages": "^4.0.0"
   },
   "dependencies": {
-    "chalk": "^4.0.0",
-    "execa": "^4.0.0",
-    "node-emoji": "^1.10.0",
     "vite": "^4.0.1"
   }
 }
