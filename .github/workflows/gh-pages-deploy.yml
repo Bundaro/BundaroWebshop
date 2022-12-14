@@ -1,10 +1,12 @@
-name: Deploy to github pages
+name: Deploy
+
 on:
   push:
     branches:
       - main
+
 jobs:
- build:
+  build:
     name: Build
     runs-on: ubuntu-latest
 
