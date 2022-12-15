@@ -1,0 +1,74 @@
+<<html>
+    <head>
+      <style>
+        body {
+          background-color: gray;
+        }
+        .top-bar {
+          background-color: lightblue;
+          height: 50px;
+          width: 100%;
+          position: fixed;
+          top: 0;
+        }
+        .menu {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          overflow: hidden;
+          float: right;
+        }
+        .menu li {
+          float: left;
+        }
+        .menu li a {
+          display: block;
+          color: black;
+          text-align: center;
+          padding: 16px;
+          text-decoration: none;
+        }
+        .menu li a:hover {
+          background-color: lightgray;
+        }
+        .logo {
+          height: 50px;
+          float: left;
+          cursor: pointer;
+        }
+        .header {
+          text-align: center;
+          margin-top: 100px;
+          font-size: 32px;
+        }
+        .text {
+          text-align: center;
+          margin: 50px;
+          font-size: 18px;
+        }
+        .picture {
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+          width: 50%;
+        }
+      </style>
+    </head>
+    <body>
+        <div class="top-bar">
+            <a href="index.html">
+              <img class="logo" src="logo.png" alt="Your Website's Logo" onclick="goBackToHomeScreen()" />
+            </a>
+            <ul class="menu">
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="producten.html">Producten</a></li>
+              <li><a href="about.html">Over ons</a></li>
+            </ul>
+          </div>
+    <div class="header">Over ons</div>
+    <div class="text">
+      Onze missie is om de beste producten te bieden aan onze klanten. Wij geloven in eerlijkheid en transparantie en streven ernaar om altijd de behoeften van onze klanten te begrijpen en te voldoen. Ons team bestaat uit enthousiaste en gepassioneerde mensen die altijd hun uiterste best doen om ervoor te zorgen dat onze klanten tevreden zijn.
+    </div>
+    <img class="picture" src="company-picture.png" />
+  </body>
+</html>
