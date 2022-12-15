@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-    <html><head><title>Bundaro</title>
+    <html>
+        <head><title>Bundaro</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,9 +9,83 @@
 ...
 </html>
 </head>
+<style>
+    body {
+      background-color: gray;
+    }
+    .top-bar {
+      background-color: lightblue;
+      height: 50px;
+      width: 100%;
+      position: fixed;
+      top: 0;
+    }
+    .menu {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      float: right;
+    }
+    .menu li {
+      float: left;
+    }
+    .menu li a {
+      display: block;
+      color: black;
+      text-align: center;
+      padding: 16px;
+      text-decoration: none;
+    }
+    .menu li a:hover {
+      background-color: lightgray;
+    }
+    .logo {
+      height: 50px;
+      float: left;
+      cursor: pointer;
+    }
+    .header {
+      text-align: center;
+      margin-top: 100px;
+      font-size: 32px;
+    }
+    .text {
+      text-align: center;
+      margin: 50px;
+      font-size: 18px;
+    }
+    .picture {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 50%;
+    }
+  </style>
 <body>
-    <h1>Jullie kunnen nu ook dingen deployen :)</h1>
-    <img src="data:image/jpeg;base64,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">
-    <img alt="random logo" src="./assets/randomLogo2-d5c23334.jpg"/>
-</body>
+    <div class="top-bar">
+        <a href="index.html">
+          <img class="logo" src="logo.png" alt="Your Website's Logo" onclick="goBackToHomeScreen()" />
+        </a>
+        <ul class="menu">
+          <li><a href="/src/contact.html">Contact</a></li>
+          <li><a href="/src/producten.html">Producten</a></li>
+          <li><a href="/src/about.html">Over ons</a></li>
+        </ul>
+      </div>
+
+    <div class="topbar">
+      <a class="menu" href="contact.html">Contact</a>
+      <a class="menu" href="producten.html">Producten</a>
+      <a class="menu" href="about.html">Over ons</a>
+      <a class="logo" href="index.html"><img src="logo.png"></a>
+    </div>
+    <h1 class="header">Bundaro</h1>
+    <p class="description">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
+      consectetur purus eu nisl rhoncus, a eleifend libero efficitur.
+      Maecenas ac urna sed elit vulputate aliquam. Donec auctor dignissim
+      urna, non aliquet metus facilisis in.
+    </p>
+  </body>
 </html>
